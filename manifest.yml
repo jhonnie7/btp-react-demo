@@ -1,0 +1,19 @@
+applications:
+  - name: btp-react-demo
+    memory: 64M
+    disk_quota: 256M
+    instances: 1
+    buildpacks:
+      - staticfile_buildpack
+    path: dist
+```
+
+**`Staticfile`** ← tells CF to serve the `dist` folder as static files
+```
+root: dist
+```
+
+**`.gitignore`**
+```
+node_modules/
+dist/
